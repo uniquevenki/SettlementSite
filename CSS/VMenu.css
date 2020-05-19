@@ -1,0 +1,521 @@
+/**************************/
+/***   Desktop Menu     ***/
+/**************************/
+#VMenu{width:100%; height:auto;}
+#VMenu ul{z-index:2000; white-space:nowrap;} /* z-index:2000 will display the sub-menu in front of the logo */
+/*#VMenu .topLevel{position:relative;border: 3px solid green;}*/
+/*#VMenu .topLevel li{float:left;margin:0;list-style-type:none;position:relative;margin-left:0px;border: 3px solid red;}*/
+#VMenu .topLevel{list-style: none; position: relative; float: left; display: block; left: 50%;} /* These settings center the menu */
+#VMenu .topLevel li{position: relative; float: left; display: block; right: 50%;} /* These settings center the menu */
+
+#VMenu .topLevel li a{display:block; white-space:nowrap; background:none; text-decoration:none;}
+#VMenu .topLevel li a div{display:block; background:none;}
+#VMenu .topLevel li a div div{display:inline-block;color:#ffffff; font-weight:normal; text-transform:capitalize; height:51px; line-height:51px; padding:0 21px; font-size:17px; }
+
+#VMenu .topLevel li a:hover{ white-space:nowrap; background:none; text-decoration:none;} 
+#VMenu .topLevel li a:active{ white-space:nowrap; background:none; text-decoration:none;}
+#VMenu .topLevel li a:hover div{background:none;}
+#VMenu .topLevel li a:active div{background:none;}
+
+/* Top-Level Menu: Set background color to Gold when hovering and when active */
+/* #VMenu .topLevel li:hover > a div div{background-color:#8f7743; font-weight:normal;text-transform:capitalize; cursor:pointer; line-height:51px; padding:0 21px; font-size:17px;} */
+
+/* Top-Level Menu: Set text color to Gold and background to dark blue when hovering */
+/* #VMenu .topLevel li:hover > a div div{background-color:#012C55; color:#8f7743; font-weight:normal;text-transform:capitalize; cursor:pointer; line-height:51px; padding:0 21px; font-size:17px;} */
+
+/* Top-Level Menu: Set text color to Gold when hovering */
+#VMenu .topLevel li:hover > a div div{color:#8f7743; font-weight:normal;text-transform:capitalize; cursor:pointer; line-height:51px; padding:0 21px; font-size:17px;}
+
+/* Top-Level Menu, Last Item: Set background color to Gold when hovering */
+/* #VMenu .topLevel li.last a:hover div div{background-color:#8f7743; font-weight:normal;text-transform:capitalize; cursor:pointer; line-height:51px; padding:0 21px; font-size:17px;} */
+
+/* Top-Level Menu, Last Item: Set text color to Gold when hovering */
+#VMenu .topLevel li.last a:hover div div{color:#8f7743; font-weight:normal;text-transform:capitalize; cursor:pointer; line-height:51px; padding:0 21px; font-size:17px;}
+
+/* Top-Level Menu, First Item: Set text color to Gold when hovering */
+#VMenu .topLevel li.first a:hover div div{color:#8f7743; font-weight:normal;text-transform:capitalize; cursor:pointer; line-height:51px; padding:0 21px; font-size:17px;}
+
+#VMenu .topLevel li a:active div div{color:#8f7743; font-weight:normal;text-transform:capitalize; cursor:pointer; line-height:51px; padding:0 21px; font-size:17px;}
+
+#VMenu .topLevel li.breadcrumb a{white-space:nowrap; background:none;text-decoration:none;}
+#VMenu .topLevel li.breadcrumb a div{background:none; padding:0;}
+#VMenu .topLevel li.breadcrumb a div div{color:#ffffff; font-weight:normal;text-transform:capitalize; cursor:pointer; line-height:51px; padding:0 21px; font-size:17px;}
+
+#VMenu .topLevel .last a div div{background:none; }
+
+#VMenu .topLevel li.last.breadcrumb a div div{background:none;}
+
+#VMenu .topLevel a div {color:black;}
+/* #VMenu .topLevel li.first.breadcrumb a div {color:#ffffff;} */ /* Including "a div" makes text white for submenu items on first submenu */
+/*#VMenu .topLevel li.first.breadcrumb a div {color:black;}*/
+
+/* Top-Level Menu, Last Item: Set menu to drop on the left, with text aligned to the right */
+#VMenu .topLevel li.last ul{
+    right: 4px;
+    left: auto;
+    text-align:right;
+}
+
+#VMenu .subLevel{display:none; position:absolute; width:auto; margin:0; padding:0; z-index:1210; border:none; border-top:none; *width:200px;*top:100%;*left:0;  /*IE7*/ }
+#VMenu .topLevel li.hover .subLevel { display:block; white-space:nowrap;}
+#VMenu .subLevel ul{ margin:0; padding:0; position:relative; z-index:1200;left: 50%; }
+#VMenu .subLevel li{ float:none; clear:both; width:100%;right: 50%;}
+#VMenu .subLevel li.haschild { *margin-bottom:-3px; }
+
+#VMenu .subLevel li.item a{ border-top: none; background-color:#8f7743; text-decoration:none; *width:200px; /*IE7*/}
+/*#VMenu .subLevel li.selected a{background:url(images/subselbg.png);}*/ /* Set background to White for active page menu item */
+/*#VMenu .subLevel li.breadcrumb a{background:url(images/subselbg.png);}*/ /* Set background to White for active page menu item */
+/*#VMenu .subLevel li.item a:hover{background:url(images/subselbg.png);} */ /* Sub-Level Item: Sets background to White when hovered */
+
+/*#VMenu .subLevel li.first.breadcrumb a{ background:url(images/subselbg.png); padding-left:0;}*/ /* Sub-Level First Item: Set background to White for active page menu item */
+
+/*#VMenu .subLevel li.first.selected a div{background:none; padding:0 30px 0 20px;color:black;}*/ /* Sub-Menu First Item Selected: Sets text to black */
+/*#VMenu .subLevel li.last.selected a div{background:none; padding:0 30px 0 20px;color:black;}*/ /* Sub-Menu Last Item Selected: Sets text to black */
+
+/*#VMenu .subLevel li.first.selected a div{background:none; padding:0 35px 0 15px;color:black;}*/ /* Sub-Menu First Item Selected: Sets text to black, Do not indent text */
+/*#VMenu .subLevel li.last.selected a div{background:none; padding:0 35px 0 15px;color:black;}*/ /* Sub-Menu Last Item Selected: Sets text to black, Do not indent text */
+
+#VMenu .subLevel li.first.selected a div{background:none; padding:0 35px 0 15px;} /* Sub-Menu First Item Selected: Do not indent text */
+#VMenu .subLevel li.last.selected a div{background:none; padding:0 35px 0 15px;} /* Sub-Menu Last Item Selected: Do not indent text */
+
+#VMenu .subLevel li.item a div{
+     display:block;
+     background:none;
+     font-size:17px;
+     color:#ffffff;  /* set submenu text color = white */
+     font-weight:normal;
+     white-space:nowrap;
+     height: 40px; /* height:28px; */ /* height of sub-menu items */
+     line-height:40px; /* line-height:27px; */ /* height of sub-menu items */
+     padding:0 35px 0 15px;
+     text-transform:capitalize;
+     -webkit-transition: all 0.2s linear 0s; /* Safari and Chrome */ 
+     -moz-transition: all 0.2s linear 0s;  /* Firefox 4 */
+     -o-transition: all 0.2s linear 0s;  /* Opera */
+     -ms-transition: all 0.2s linear 0s;  /* IE */
+     transition: all 0.2s linear 0s; 
+}
+     
+#VMenu .subLevel li.selected > a div {
+     background:none;
+     /*color:#2c2c2c;*/ /* black */
+     cursor:pointer;
+     text-transform:capitalize;
+     padding:0 30px 0 20px;
+     -webkit-transition: all 0.2s linear 0s;  
+     -moz-transition: all 0.2s linear 0s;  
+     -o-transition: all 0.2s linear 0s;  
+     -ms-transition: all 0.2s linear 0s;  
+     transition: all 0.2s linear 0s;
+}
+
+#VMenu .subLevel li.breadcrumb > a div {
+     background:none;
+     /*color:#2c2c2c;*/ /* black */
+     cursor:pointer;
+     text-transform:capitalize;
+     /*padding:0 30px 0 20px;*/ /* This setting indents the active page menu item */
+     padding:0 35px 0 15px; /* This setting does not indent the active page menu item */
+     -webkit-transition: all 0.2s linear 0s;  
+     -moz-transition: all 0.2s linear 0s;  
+     -o-transition: all 0.2s linear 0s;  
+     -ms-transition: all 0.2s linear 0s;  
+     transition: all 0.2s linear 0s; 
+}
+
+#VMenu .subLevel li.item a:hover div {
+     background:none;
+     color:#2c2c2c;
+     cursor:pointer;
+     text-transform:capitalize;
+     /* padding:0 30px 0 20px; */ /* This setting indents the highlighted menu item */
+     padding:0 35px 0 15px; /* This setting does not indent the highlighted menu item */
+     -webkit-transition: all 0.2s linear 0s;  
+     -moz-transition: all 0.2s linear 0s;  
+     -o-transition: all 0.2s linear 0s;  
+     -ms-transition: all 0.2s linear 0s;  
+     transition: all 0.2s linear 0s;
+}
+
+#VMenu .subLevel li.haschild > a div{ background:url(images/child-arrow2.png) no-repeat right center;}
+#VMenu .subLevel li.selected.haschild > a div { background:url(images/child-arrow2.png) no-repeat right center; }
+#VMenu .subLevel li.breadcrumb.haschild > a div { background:url(images/child-arrow2.png) no-repeat right center; }
+#VMenu .subLevel li.item.haschild > a:hover div { background:url(images/child-arrow2.png) no-repeat right center; }
+
+#VMenu .subLevelRight{ display:none; position:absolute; left:100%; top:0px; width:auto; margin:0; border:none; }
+#VMenu .subLevel li.hover > .subLevelRight{ display:block; }
+
+#VMenu img {max-height: 28px; margin-right: 6px; vertical-align: middle;}
+
+
+#VMenu,
+#VMenu ul,
+#VMenu ul li,
+#VMenu ul li a,
+#VMenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#VMenu:after,
+#VMenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#VMenu #menu-button {
+  display: none;
+}
+
+/* This style tag must be added to override bootstrap.css menu styling */
+/* It stops bootstrap.css from putting a box around the first menu item */
+#VMenu .breadcrumb {
+    padding: 0px 0px !important;
+    margin-bottom: 0px !important;
+    list-style: none !important;
+    background-color: inherit !important;
+    border-radius: 0px !important;
+}
+
+/**************************/
+/*** Mobile Device Menu ***/
+/**************************/
+/* @media (max-width:768px) { */
+@media (max-width: 991px) {    
+
+	#VMenu ul {
+	      z-index:2000;  /* z-index:2000 will display the sub-menu in front of the logo */
+	      white-space:nowrap;
+	      /* top: 10px; */ /* This positions the menu lower on the screen */
+	}
+
+#VMenu .topLevel{left: 0%;}
+#VMenu .topLevel li{right: auto;}
+#VMenu .subLevel ul{left: 0%;}
+#VMenu .subLevel li{right: auto;}
+
+/* Top-Level Menu, First Item: Set text color to Black when hovering */
+/*#VMenu .topLevel li.first a:hover div div{color:black;line-height: 37px;height: 37px;font-size: 15px;vertical-align: baseline;}*/
+
+/* Top-Level Menu, First Item: Set colors when hovering */
+#VMenu .topLevel li.first a:hover div div {
+    color:#8f7743; /* Gold */
+    background:#003464; /* Light Blue */
+    line-height: 37px;
+    height: 37px;
+    font-size: 16px; /*font-size: 15px;*/
+    vertical-align: baseline;
+}
+
+/* Top-Level Menu, Last Item: Set text color to Black when hovering */
+/*#VMenu .topLevel li.last a:hover div div{color:black; background:#ffffff;}*/
+
+/* Top-Level Menu, Last Item: Set colors when hovering */
+#VMenu .topLevel li.last a:hover div div {
+    color:#8f7743; /* Gold */
+    background:#003464; /* Light Blue */
+}
+
+
+	#VMenu .topLevel li {
+	      float:none;
+	      margin:0;
+	      list-style-type:none;
+	      position:relative;
+	      margin-left:0px; 
+	      margin-bottom:2px; 
+	      border:none; 
+	      overflow:auto;
+	}
+
+	/* Top-Level Menu: Set text color to white and background to blue */
+	#VMenu .topLevel li a div div {
+	      display:block;
+	      color:#ffffff; 
+	      font-weight:normal; 
+	      text-transform:capitalize; 
+	      height:37px; 
+	      line-height:37px; 
+	      padding:0;
+	      background: #003464; /* Light Blue */ /* background:#002d57; */ /* Dark Blue */
+	      font-size:16px; /* font-size:15px;  */
+	      text-align:center;
+	} 
+
+	#VMenu .topLevel li a:hover, 
+	#VMenu .topLevel li a:active { 
+	      white-space:nowrap; 
+	      background:none;
+	      text-decoration:none;
+	}
+
+	#VMenu .topLevel li a:hover div div, 
+	#VMenu .topLevel li a:active div div {
+	      color:white;  /*color:#0a0a0a; */
+	      font-weight:normal;
+	      text-transform:capitalize; 
+	      cursor:pointer; 
+	      background: #003464; /* Light Blue */ /*background:#ffffff; */
+	      line-height:37px; 
+	      padding:0; 
+	      font-size:15px; 
+	      text-align:center; 
+	}
+
+	#VMenu .topLevel li.breadcrumb a div div {
+	      color:#ffffff; 
+	      font-weight:normal;
+	      text-transform:capitalize; 
+	      cursor:pointer; 
+	      background:none;  
+	      line-height:37px; 
+	      padding:0; 
+	      font-size:15px; 
+	      text-align:center; 
+	}
+
+	#VMenu .subLevel {
+	     display:none; 
+	     position:relative; 
+	     width:100%; 
+	     margin:2px auto; /* sets thickness of border between top level item and first sub-level item */
+	     padding:0;
+	     border:none; 
+	     text-align:center; /* text-align:left; */
+	     text-indent: 20px;
+	     /**width:200px;  IE7*/
+	}
+
+	#VMenu .subLevel li {
+	     float:none; 
+	     clear:both; 
+	     width:100%; 
+	     margin:0;
+	}
+
+
+	#VMenu .subLevel li.item a,
+	#VMenu .subLevel li.item a:hover { 
+	      /* margin:1px auto; */
+	      border-top:none; 
+	      background:url(images/subbg.png); 
+	      text-decoration:none; 
+	      *width:200px; /*IE7*/
+	}
+
+
+	/* Sets text attributes for sub-menu items */  /* all sub-menu items */
+	#VMenu .subLevel li.item a div { 
+	     /*border-bottom:1px solid #2c2c2c;*/ /* Lines between sub-menu items */
+	     display:block; 
+	     background: #003464; /* Light Blue */ /*background:none; */
+	     font-size:14px; /* font-size:12px; */
+	     color: white; /* color: black; */
+	     font-weight:normal; 
+	     white-space:nowrap; 
+	     height:30px; 
+	     line-height:30px; 
+	     /* padding-left: 15px; */ /* indentation for menu item */
+	     text-transform:capitalize;
+	     -webkit-transition: all 0.2s linear 0s;  
+	     -moz-transition: all 0.2s linear 0s;  
+	     -o-transition: all 0.2s linear 0s;  
+	     -ms-transition: all 0.2s linear 0s;  
+	     transition: all 0.2s linear 0s; 
+	}
+
+	/* Sets text attributes for sub-menu items */
+	#VMenu .subLevel li.selected > a div, 
+	#VMenu .subLevel li.breadcrumb > a div, 
+	#VMenu .subLevel li.item a:hover div { 
+	     background: #003464; /* Light Blue */ /*background:none; */
+	     color: #8f7743; /* Gold */ /* color: black; */
+	     cursor:pointer;  
+	     text-transform:capitalize; 
+	     /* padding-left: 25px; */ /* indentation for menu item */
+	     -webkit-transition: all 0.2s linear 0s; /* Safari and Chrome */  
+	     -moz-transition: all 0.2s linear 0s; /* Firefox 4 */ 
+	     -o-transition: all 0.2s linear 0s; /* Opera */ 
+	     -ms-transition: all 0.2s linear 0s; /* IE */  
+	     transition: all 0.2s linear 0s; 
+	}
+	
+	/* Set the text color for the active page menu item */
+	#VMenu .subLevel li.selected > a div { color: white; }
+	
+	#VMenu .subLevel li.first.selected a div{background: #003464;} /* Sub-Menu First Item Selected */
+	#VMenu .subLevel li.last.selected a div{background: #003464;} /* Sub-Menu Last Item Selected */
+
+	/* Sets text attributes for sub-sub-menu items */
+	#VMenu .subLevel ul li li.item a div { 
+	     border-bottom:1px solid #2c2c2c;
+	     display:block; 
+	     background:none; 
+	     font-size:12px; 
+	     color: black;
+	     font-weight:normal; 
+	     white-space:nowrap; 
+	     height:30px; 
+	     line-height:30px; 
+	     padding-left: 35px; /* indentation for menu item */
+	     text-transform:capitalize;
+	     -webkit-transition: all 0.2s linear 0s;  
+	     -moz-transition: all 0.2s linear 0s;  
+	     -o-transition: all 0.2s linear 0s;  
+	     -ms-transition: all 0.2s linear 0s;  
+	     transition: all 0.2s linear 0s; 
+	}
+
+
+	/* Sets text attributes for sub-sub-menu items when hovered */
+	#VMenu .subLevel ul li li.item a:hover div { 
+	     border-bottom:1px solid #2c2c2c;
+	     display:block; 
+	     background:none; 
+	     font-size:12px; 
+	     color: black;
+	     font-weight:normal; 
+	     white-space:nowrap; 
+	     height:30px; 
+	     line-height:30px; 
+	     padding-left: 45px; /* indentation for menu item */
+	     text-transform:capitalize;
+	     -webkit-transition: all 0.2s linear 0s;  
+	     -moz-transition: all 0.2s linear 0s;  
+	     -o-transition: all 0.2s linear 0s;  
+	     -ms-transition: all 0.2s linear 0s;  
+	     transition: all 0.2s linear 0s; 
+	}
+
+	#VMenu .subLevelRight {
+	      display:none; 
+	      position:relative; 
+	      left:0px; 
+	      top:0px; 
+	      width:100%; 
+	      margin:0; 
+	      border:none;
+	}
+
+	#VMenu .topLevel {
+	  width: 100%;
+	  display: none;
+	}
+
+
+	#VMenu ul ul li a {
+	  /* padding-left: 25px; */ /* Left margin for the black lines between the sub-menu items */
+	}
+
+	#VMenu ul ul ul li a {
+	  padding-left: 35px;
+	}
+
+
+	#VMenu #menu-button {
+	    position: fixed;
+	    /*top: 10px;*/
+	    top: -10px;
+	    right: 17px; /* A value of 17px places the menu button on the upper right-hand side. Commenting this line puts it on the left-hand side. */
+	    display: block;
+	    padding: 17px;
+	    color: #dddddd;
+	    cursor: pointer;
+	    font-size: 12px;
+	    text-transform: uppercase;
+	    font-weight: 700;
+	}
+
+	/* Resizes mobile menu to fill width of screen */
+	#VMenu {
+	     right: 0;
+	     /*position: absolute !important;*/ /* Resizes mobile menu to fill width of screen. How??? */
+	     position: fixed !important; /* Keeps mobile menu icon in fixed place on iPhones */
+	     z-index: 1001; /* z-index:1001 displays the mobile menu in front of the logo */
+	}
+
+	/* Set menu background color (this color will appear in the gaps between menu items) */
+	#VMenu ul {
+		background: #003464; /* Light Blue */
+	}
+
+	/* Top Level Menu: Show "has child" arrow when there is a submenu */
+	#VMenu .topLevel li.haschild > a div {
+	      background:url(images/JW_Plus1.JPG) no-repeat right center; /*background:url(images/child-arrow2-down.png) no-repeat right center;*/
+	     /*background-color:#002d57;*/ /* Dark Blue */
+	     background-color: #003464; /* Light Blue (this color will appear for all top-level menu items on mobile) */
+	}
+
+    /*Set style for top-level item when sub-menu is expanded */
+	#VMenu .topLevel li.haschild.hover > a div { 
+	     background:url(images/JW_Minus1.JPG) no-repeat right center;  /* background:url(images/haschild.png) no-repeat right center; */
+	     background-color: #003464; /* Light Blue */ /*background-color:white; */
+	     color:#8f7743; /* Gold */ /*color:black;*/
+	     font-size: 16px;
+	}
+
+	/* Sub Level Menu: Show "has child" arrow when there is a sub-submenu, with light-blue background and black text */
+	#VMenu .subLevel li.haschild > a div {
+	     background:url(images/haschild.png) no-repeat right center; 
+	     background-color:#DAE1E8;
+	     color:black;
+	}
+
+	/* Top-Level Menu, First Item: Makes text black for submenu items under first top-menu item */
+	/*#VMenu .topLevel li.first.breadcrumb ul a div {
+	     color:black;
+	}*/
+
+	/* Top-Level: Set font size and line height when top-level item is expanded and loses hover */
+	#VMenu .topLevel li:hover > a div div {
+	     font-weight:normal;
+	     text-transform:capitalize; 
+	     cursor:pointer; 
+	     line-height:37px; 
+	     padding:0 21px; 
+	     font-size:16px; /*font-size:15px;*/
+	}
+
+	/* Top-Level Menu, Last Item: Set font size and line height */
+	#VMenu .topLevel li.last a:hover div div {
+	     font-weight:normal;
+	     text-transform:capitalize; 
+	     cursor:pointer; 
+	     line-height:37px; 
+	     padding:0 21px; 
+	     font-size:16px; /*font-size:15px;*/
+	}
+
+	/* Top-Level Menu, First Item: When hovered, show "has child" arrow when there is a submenu */
+	#VMenu .topLevel li.first.haschild.hover > a div { 
+	     background:url(images/JW_Minus1.JPG) no-repeat right center;  /* background:url(images/haschild.png) no-repeat right center; */
+	     background-color: #003464; /* Light Blue */ /*background-color:white; */
+	     color:#8f7743; /* Gold */ /*color:black;*/
+	}
+
+	/* Top-Level Menu, Last Item: When hovered, show "has child" arrow when there is a submenu */
+	#VMenu .topLevel li.last.haschild.hover > a div { 
+	     background:url(images/JW_Minus1.JPG) no-repeat right center;  /* background:url(images/haschild.png) no-repeat right center; */
+	     background-color: #003464; /* Light Blue */ /*background-color:white; */
+	     color:#8f7743; /* Gold */ /*color:black;*/
+	}
+
+    /* Top-Level Menu, Last Item: Center the text */
+    #VMenu .topLevel li.last ul{
+        text-align:center;
+    }
+
+
+}
+
+

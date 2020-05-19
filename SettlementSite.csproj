@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>SettlementSite</RootNamespace>
+    <ProjectGuid>{F4153B16-E4A1-4F0B-9DA3-1E4A1BB8F808}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="CSS\bootstrap.css" />
+    <Content Include="CSS\plugin\flexslider.css" />
+    <Content Include="CSS\jPushMenu.css" />
+    <Content Include="CSS\jquery-ui.css" />
+    <Content Include="CSS\navigation.css" />
+    <Content Include="CSS\plugin\owl.carousel.css" />
+    <Content Include="CSS\scrolling-nav.css" />
+    <Content Include="CSS\Site.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CSS\VMenu.css" />
+    <Content Include="Images\body-bg.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Images\Logo.png" />
+    <Content Include="Images\mask-curve.png" />
+    <Content Include="Images\VHeaderImage1.jpg" />
+    <Content Include="Images\VHeaderImage3.jpg" />
+    <Content Include="Images\VHeaderImage4.jpg" />
+    <Content Include="Images\VHeaderImage5.jpg" />
+    <Content Include="Images\VHeaderImage6.jpg" />
+    <Content Include="Pages\Default.html" />
+    <Content Include="Pages\Home.html" />
+    <Content Include="Scripts\imagesloaded.pkgd.min.js" />
+    <Content Include="Scripts\jPushMenu.js" />
+    <Content Include="Scripts\jquery.fitvids.js" />
+    <Content Include="Scripts\jquery.flexslider.js" />
+    <Content Include="Scripts\jquery.hoverIntent.min.js" />
+    <Content Include="Scripts\mediaelement-and-player.min.js" />
+    <Content Include="Scripts\scrolling-nav.js" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\theme.js" />
+    <Content Include="Scripts\VMenu.js" />
+    <Content Include="Scripts\wow.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\owl.carousel.min.js" />
+  </ItemGroup>
+</Project>
