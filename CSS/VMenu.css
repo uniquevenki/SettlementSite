@@ -451,14 +451,14 @@
 
 	/* Top Level Menu: Show "has child" arrow when there is a submenu */
 	#VMenu .topLevel li.haschild > a div {
-	      background:url(images/JW_Plus1.JPG) no-repeat right center; /*background:url(images/child-arrow2-down.png) no-repeat right center;*/
+	      background:url(../images/JW_Plus1.JPG) no-repeat right center; /*background:url(images/child-arrow2-down.png) no-repeat right center;*/
 	     /*background-color:#002d57;*/ /* Dark Blue */
 	     background-color: #003464; /* Light Blue (this color will appear for all top-level menu items on mobile) */
 	}
 
     /*Set style for top-level item when sub-menu is expanded */
 	#VMenu .topLevel li.haschild.hover > a div { 
-	     background:url(images/JW_Minus1.JPG) no-repeat right center;  /* background:url(images/haschild.png) no-repeat right center; */
+	     background:url(../images/JW_Minus1.JPG) no-repeat right center;  /* background:url(images/haschild.png) no-repeat right center; */
 	     background-color: #003464; /* Light Blue */ /*background-color:white; */
 	     color:#8f7743; /* Gold */ /*color:black;*/
 	     font-size: 16px;

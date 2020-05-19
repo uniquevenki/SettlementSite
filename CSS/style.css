@@ -1698,7 +1698,7 @@ body.cms .header {
 	-moz-transition: height 0.75s ease;
 	-o-transition: height 0.75s ease;
 	padding: 0;
-	height: 131px;
+	height: 70px;
 }
 .header .navigation .bottomBorder {
 	display: none;
